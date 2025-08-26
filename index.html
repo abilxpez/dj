@@ -1,37 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Countdown ❤️</title>
-<meta name="description" content="Simple countdown timer with floating hearts." />
-<link rel="preload" href="assets/firstpic.png" as="image">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div class="hearts" id="hearts" aria-hidden="true"></div>
-<main class="wrap">
-<section class="card">
-<header>
-<img id="photo" src="assets/firstpic.png" alt="Photo" />
-<div>
-<h1>Countdown to <span id="target-label">A Special Day</span> <span aria-hidden="true">❤️</span></h1>
-<p class="sub">I love you baby, unconditionally, always</p>
-</div>
-</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Countdown ❤️</title>
+    <meta
+      name="description"
+      content="Simple countdown timer with floating hearts."
+    />
+    <link rel="preload" href="assets/firstpic.png" as="image" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="hearts" id="hearts" aria-hidden="true"></div>
+    <main class="wrap">
+      <section class="card">
+        <header>
+          <img id="photo" src="assets/firstpic.png" alt="Photo" />
+          <div>
+            <h1>
+              countdown till <span id="target-label">A Special Day</span>
+              <span aria-hidden="true">❤️</span>
+            </h1>
+            <p class="sub">I love you baby, unconditionally, always</p>
+          </div>
+        </header>
 
-<div class="timer" aria-live="polite">
-<div class="unit"><div id="w" class="value">--</div><div class="label">Weeks</div></div>
-<div class="unit"><div id="d" class="value">--</div><div class="label">Days</div></div>
-<div class="unit"><div id="h" class="value">--</div><div class="label">Hours</div></div>
-<div class="unit"><div id="m" class="value">--</div><div class="label">Minutes</div></div>
-<div class="unit"><div id="s" class="value">--</div><div class="label">Seconds</div></div>
-</div>
+        <div class="timer" aria-live="polite">
+          <div class="unit">
+            <div id="w" class="value">--</div>
+            <div class="label">Weeks</div>
+          </div>
+          <div class="unit">
+            <div id="d" class="value">--</div>
+            <div class="label">Days</div>
+          </div>
+          <div class="unit">
+            <div id="h" class="value">--</div>
+            <div class="label">Hours</div>
+          </div>
+          <div class="unit">
+            <div id="m" class="value">--</div>
+            <div class="label">Minutes</div>
+          </div>
+          <div class="unit">
+            <div id="s" class="value">--</div>
+            <div class="label">Seconds</div>
+          </div>
+        </div>
 
-<span class="sr-only" id="sr-announce"></span>
-</section>
-</main>
+        <span class="sr-only" id="sr-announce"></span>
+      </section>
 
-<script src="js/main.js" defer></script>
-</body>
+        <!-- Section heading ABOVE the card -->
+        <h2 class="section-title">loving messages and poetry</h2>
+
+        <!-- Love notes card with optional poem title and up to 3 lines -->
+        <section class="card love-notes">
+        <h3 id="note-title" class="note-title" hidden></h3>
+        <div class="note-lines" aria-live="polite">
+            <p id="line1" class="note-line"></p>
+            <p id="line2" class="note-line"></p>
+            <p id="line3" class="note-line"></p>
+        </div>
+        </section>
+
+        <h2 class="section-title">music dedicated to the one I love</h2>
+        <section class="card media">
+        <!-- Apple Music embed -->
+        <iframe
+            allow="autoplay *; encrypted-media *;"
+            frameborder="0"
+            height="450"
+            style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/us/playlist/iluminas-mi-vida-mi-fuego/pl.u-b3b8RKBuKPDNGzM">
+        </iframe>
+        </section>
+
+
+    </main>
+
+    <script src="js/main.js" defer></script>
+  </body>
 </html>

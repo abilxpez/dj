@@ -1,0 +1,56 @@
+:root{
+    --bg: #0f0f12;
+    --card: #17181f;
+    --text: #e5e7eb;
+    --muted: #9aa3b2;
+    --accent: #e11d48; /* rose-600 */
+    --heart: #f472b6; /* pink-400 */
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0; background: radial-gradient(1200px 800px at 80% -10%, #1b1c25 0%, var(--bg) 60%);
+    color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    overflow-x:hidden;
+}
+.wrap{
+    min-height:100%; display:flex; align-items:center; justify-content:center; padding:40px 16px;
+}
+
+.card{
+    width:min(100%, 880px); background:rgba(23,24,31,.7); backdrop-filter: blur(8px);
+    border:1px solid rgba(148,163,184,.15); border-radius:24px; padding:28px; box-shadow:0 10px 35px rgba(0,0,0,.35);
+}
+header{display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
+header img{
+    width:140px; height:140px; object-fit:cover; border-radius:16px; border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 6px 24px rgba(0,0,0,.35);
+}
+h1{margin:0; font-weight:800; letter-spacing:.4px}
+p.sub{margin:.2rem 0 0; color:var(--muted)}
+
+.timer{display:grid; grid-template-columns: repeat(5, minmax(110px,1fr)); gap:16px; margin-top:22px}
+@media (max-width:680px){ .timer{ grid-template-columns: repeat(2, minmax(120px,1fr)); } }
+
+.unit{
+    background: linear-gradient(180deg, rgba(30,32,40,.65), rgba(20,20,26,.65));
+    border:1px solid rgba(148,163,184,.15);
+    border-radius:18px; padding:18px; text-align:center;
+}
+.value{font-size:40px; font-weight:900; line-height:1; color:var(--accent);}
+.label{margin-top:6px; font-size:12px; letter-spacing:1.2px; text-transform:uppercase; color:var(--muted)}
+
+.footer{margin-top:18px; color:var(--muted); font-size:13px}
+
+/* Floating hearts */
+.hearts{position:fixed; inset:0; pointer-events:none; overflow:hidden}
+.heart{position:absolute; top:-10vh; font-size:18px; color:var(--heart); opacity:.85;
+    text-shadow: 0 2px 8px rgba(244,114,182,.4);
+    animation-name: fall, sway, spin;
+    animation-iteration-count: infinite;
+}
+@keyframes fall{to{transform:translateY(110vh)}}
+@keyframes sway{ 0%,100%{margin-left:0} 50%{margin-left:18px} }
+@keyframes spin{ 0%{rotate:0deg} 100%{rotate:360deg} }
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

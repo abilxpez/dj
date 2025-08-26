@@ -73,13 +73,22 @@ const LOVE_NOTES = [
       "Siente mi frío y mi",
       "Caliente ardor"
     ]},
-    { title: "", lines: ["I feel a warm blanket when I read your messages, I feel a wave of emotion crash around me, when I see your face, I feel as if I am seeing a beautiful sunset, I want to count the stars with you, and if it takes forever, well that’s how long I want with you."] },
+    { title: "", lines: ["I feel a warm blanket when I read your messages, I feel a wave of emotion crash around me, when I see your face, I feel as if I am seeing a beautiful sunset, I want to count the stars with you, and if it takes forever, well that’s how long I want with you"] },
     { title: "tierra infinita", lines: [
         "agua a tus pies,",
         "el calor besa tu piel,",
-        "warm as your whisper."
+        "siempre contigo"
     ]},
-    { title: "", lines: ["I want to be the sunrise in your morning, the light in your night, the shore where your waves rest, the answer to your longing, the reason your days are brighter, your storms are calmer, your dreams are sweeter, your skies are clearer, and your heart is lighter."]},
+    { title: "", lines: ["I want to be the sunrise in your morning, the light in your night, the shore where your waves rest, the answer to your longing, the reason your days are brighter, your storms are calmer, your dreams are sweeter, your skies are clearer, and your heart is lighter"]},
+    { title: "", lines: ["mi amor, me he enamorado de ti y ahora el sol brilla mas fuerte, la luna irradia, mi corazon late por ti, te quiero en mi vida por el resto de mi vida"]}, 
+    { title: "Je t'appartiens", lines: [
+        "ma main, mes lèvres,",
+        "mes yeux, pour toujours à toi,",
+        "mon amour parfait"
+    ]},
+    { title: "", lines: ["I’m going to fight for us everyday, so that we can be together for a long time, hopefully forever"]}, 
+    { title: "", lines: ["I hope your heart is mine, and if it is, I promise to protect it like the greatest treasure in this world, because it is "]}, 
+    { title: "", lines: ["You’re perfect, I love reading your words, you’re my favorite book 💗"]}, 
 ];
   
   let noteIndex = 0;
@@ -123,5 +132,5 @@ const LOVE_NOTES = [
   }
   
   nextNote();
-  setInterval(nextNote, 7777); // change every ~4s
+  setInterval(nextNote, 10777); // change every ~4s
   
